@@ -413,3 +413,17 @@ Xem [LICENSE](LICENSE) để biết chi tiết về giấy phép.
 ## Giấy phép
 
 Các phần sửa đổi do cộng tác viên OpenClaude thực hiện được cấp phép theo MIT; phần Claude Code được kế thừa vẫn thuộc phạm vi giấy phép của Anthropic. Xem [LICENSE](LICENSE).
+
+## Ý tưởng ứng dụng thực tế: Trợ lý lập trình cá nhân
+
+Bạn có thể sử dụng **OpenClaude như một trợ lý hỗ trợ phát triển phần mềm** trong quá trình học tập và làm dự án. Ví dụ, khi làm một website hoặc ứng dụng quản lý sinh viên, hãy yêu cầu OpenClaude:
+
+- Phân tích cấu trúc dự án và giải thích chức năng của từng tệp mã nguồn.
+- Tìm lỗi, đề xuất cách sửa và giải thích nguyên nhân để bạn hiểu cách khắc phục.
+- Viết unit test, kiểm tra các trường hợp đầu vào và hỗ trợ phát hiện lỗi trước khi nộp bài.
+- Tạo hoặc cập nhật tài liệu README, hướng dẫn cài đặt và mô tả API.
+- Đề xuất cải thiện chất lượng mã nguồn, sau đó dùng Git để quản lý phiên bản và đẩy những thay đổi đã kiểm tra lên GitHub.
+
+**Quy trình gợi ý:** Đọc mã nguồn → yêu cầu phân tích → chỉnh sửa từng phần → chạy thử và kiểm tra → xem lại thay đổi bằng Git → commit và push lên GitHub.
+
+> **Lưu ý:** Hãy tự kiểm tra và chạy thử mã nguồn trước khi chấp nhận thay đổi. Không đưa API key, mật khẩu hoặc thông tin bí mật vào prompt hay repository công khai.
