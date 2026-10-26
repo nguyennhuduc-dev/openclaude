@@ -1,63 +1,35 @@
-<div align="center">
-  <img src="docs/assets/openclaude-wordmark.png" alt="OpenClaude — Open terminal for any LLM" width="830">
+# OpenClaude
 
-  <p>
-    <a href="https://trendshift.io/repositories/25807?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-25807" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/25807/daily?language=TypeScript" alt="Twigpine%2Fopenclaude | Trendshift" width="250" height="55"/></a>
-    <a href="https://trendshift.io/repositories/25807?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-25807" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/25807/monthly?language=TypeScript" alt="Twigpine%2Fopenclaude | Trendshift" width="250" height="55"/></a>
-    <a href="https://trendshift.io/repositories/25807?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-25807" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/25807" alt="Twigpine%2Fopenclaude | Trendshift" width="250" height="55"/></a>
-  </p>
+<div align="center">
+  <img src="docs/assets/openclaude-wordmark.png" alt="OpenClaude — môi trường terminal cho mọi mô hình LLM" width="830">
 </div>
 
-OpenClaude is an open-source coding-agent CLI for cloud and local model providers.
+**OpenClaude** là công cụ AI hỗ trợ lập trình mã nguồn mở, hoạt động trong terminal và tương thích với các nhà cung cấp mô hình AI trên đám mây hoặc chạy cục bộ.
 
-Use OpenAI-compatible APIs, Gemini, GitHub Models, Codex OAuth, Codex, Ollama, Atomic Chat, and other supported backends while keeping one terminal-first workflow: prompts, tools, agents, MCP, slash commands, and streaming output.
+Bạn có thể sử dụng API tương thích OpenAI, Gemini, GitHub Models, Codex OAuth, Codex, Ollama, Atomic Chat cùng nhiều dịch vụ khác trong một quy trình làm việc thống nhất: nhập yêu cầu, thao tác tệp, sử dụng công cụ, điều phối agent, kết nối MCP, dùng lệnh slash và nhận kết quả theo thời gian thực.
 
 [![PR Checks](https://github.com/Twigpine/openclaude/actions/workflows/pr-checks.yml/badge.svg?branch=main)](https://github.com/Twigpine/openclaude/actions/workflows/pr-checks.yml)
 [![Release](https://img.shields.io/github/v/tag/Twigpine/openclaude?label=release&color=0ea5e9)](https://github.com/Twigpine/openclaude/tags)
 [![npm downloads](https://img.shields.io/npm/dm/@twigpine/openclaude)](https://www.npmjs.com/package/@twigpine/openclaude)
 [![Discussions](https://img.shields.io/badge/discussions-open-7c3aed)](https://github.com/Twigpine/openclaude/discussions)
-[![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/k68zFR6AcB)
+[![Discord](https://img.shields.io/badge/Discord-tham_gia-5865F2?logo=discord&logoColor=white)](https://discord.gg/k68zFR6AcB)
 [![X](https://img.shields.io/badge/X-@twigpine-000000?logo=x&logoColor=white)](https://x.com/twigpine)
 [![Security Policy](https://img.shields.io/badge/security-policy-0f766e)](SECURITY.md)
 [![License](https://img.shields.io/badge/license-MIT-2563eb)](LICENSE)
 
-OpenClaude is also mirrored to Twigpine:
-[gitlawb.com/node/repos/z6MkqDnb/openclaude](https://gitlawb.com/node/repos/z6MkqDnb/openclaude)
+Dự án cũng được đồng bộ tại [Twigpine](https://gitlawb.com/node/repos/z6MkqDnb/openclaude).
 
-[Quick Start](#quick-start) | [Setup Guides](#setup-guides) | [Providers](#supported-providers) | [Development](#development) | [VS Code Extension](#vs-code-extension) | [Partners](#partners) | [Community](#community)
+**Điều hướng:** [Bắt đầu nhanh](#bắt-đầu-nhanh) · [Hướng dẫn cài đặt](#hướng-dẫn-cài-đặt) · [Nhà cung cấp AI](#các-nhà-cung-cấp-được-hỗ-trợ) · [Tính năng](#các-tính-năng-chính) · [Phát triển](#phát-triển-dự-án) · [Tiện ích VS Code](#tiện-ích-vs-code) · [Cộng đồng](#cộng-đồng)
 
-## Partners
+## Đối tác
 
 <table align="center">
   <tr>
-    <td align="center" width="150" height="80">
-      <a href="https://twigpine.com">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://twigpine.com/logo-dark.png">
-          <img src="https://twigpine.com/logo.png" alt="Twigpine logo" width="72">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="150" height="80">
-      <a href="https://bankr.bot">
-        <img src="https://bankr.bot/favicon.svg" alt="Bankr.bot logo" width="72">
-      </a>
-    </td>
-    <td align="center" width="150" height="80">
-      <a href="https://atomic.chat/">
-        <img src="docs/assets/atomic-chat-logo.png" alt="Atomic Chat logo" width="72">
-      </a>
-    </td>
-    <td align="center" width="150" height="80">
-      <a href="https://mimo.mi.com">
-        <img src="https://mimo.xiaomi.com/mimo-v2-pro/assets/logo.svg" alt="Xiaomi MiMo logo" width="136">
-      </a>
-    </td>
-    <td align="center" width="150" height="80">
-      <a href="https://www.atlascloud.ai/">
-        <img src="docs/assets/atlas-cloud-banner.png" alt="Atlas Cloud logo" width="136">
-      </a>
-    </td>
+    <td align="center"><a href="https://twigpine.com"><img src="https://twigpine.com/logo.png" alt="Twigpine" width="72"></a></td>
+    <td align="center"><a href="https://bankr.bot"><img src="https://bankr.bot/favicon.svg" alt="Bankr.bot" width="72"></a></td>
+    <td align="center"><a href="https://atomic.chat/"><img src="docs/assets/atomic-chat-logo.png" alt="Atomic Chat" width="72"></a></td>
+    <td align="center"><a href="https://mimo.mi.com"><img src="https://mimo.xiaomi.com/mimo-v2-pro/assets/logo.svg" alt="Xiaomi MiMo" width="100"></a></td>
+    <td align="center"><a href="https://www.atlascloud.ai/"><img src="docs/assets/atlas-cloud-banner.png" alt="Atlas Cloud" width="120"></a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://twigpine.com"><strong>Twigpine</strong></a></td>
@@ -66,112 +38,49 @@ OpenClaude is also mirrored to Twigpine:
     <td align="center"><a href="https://mimo.mi.com"><strong>Xiaomi MiMo</strong></a></td>
     <td align="center"><a href="https://www.atlascloud.ai/"><strong>Atlas Cloud</strong></a></td>
   </tr>
-  <tr>
-    <td align="center" width="150" height="80">
-      <a href="https://aimlapi.com/">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="docs/assets/aimlapi-logo-dark.svg">
-          <img src="docs/assets/aimlapi-logo.svg" alt="AI/ML API logo" width="136">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="150" height="80">
-      <a href="https://novita.ai/">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="docs/assets/novita-logo-dark.svg">
-          <img src="docs/assets/novita-logo.svg" alt="Novita AI logo" width="136">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="150" height="80">
-      <a href="https://www.apismart.ai">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="docs/assets/apismart-logo-dark.png">
-          <img src="docs/assets/apismart-logo.png" alt="ApiSmart logo" width="120">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="150" height="80">
-      <a href="https://concentrate.ai/">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="docs/assets/concentrate-logo-dark.svg">
-          <img src="docs/assets/concentrate-logo.svg" alt="Concentrate logo" width="64">
-        </picture>
-      </a>
-    </td>
-    <td align="center" width="150" height="80">
-      <a href="https://exa.ai/">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="docs/assets/exa-logo-dark.svg">
-          <img src="docs/assets/exa-logo.svg" alt="Exa logo" width="110">
-        </picture>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://aimlapi.com/"><strong>AI/ML API</strong></a></td>
-    <td align="center"><a href="https://novita.ai/"><strong>Novita AI</strong></a></td>
-    <td align="center"><a href="https://www.apismart.ai"><strong>ApiSmart</strong></a></td>
-    <td align="center"><a href="https://concentrate.ai/"><strong>Concentrate</strong></a></td>
-    <td align="center"><a href="https://exa.ai/"><strong>Exa</strong></a></td>
-  </tr>
-  <tr>
-    <td align="center" width="150" height="80">
-      <a href="https://www.gmicloud.ai/">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="docs/assets/gmi-cloud-logo-dark.svg">
-          <img src="docs/assets/gmi-cloud-logo.svg" alt="GMI Cloud logo" width="120">
-        </picture>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://www.gmicloud.ai/"><strong>GMI Cloud</strong></a></td>
-  </tr>
 </table>
 
-## Why OpenClaude
+## Vì sao nên dùng OpenClaude?
 
-- One CLI across cloud APIs and local model backends — no per-provider tooling
-- Guided provider setup and saved profiles with `/provider`
-- Coding-agent workflows in one place: bash, file tools, grep, glob, agents, tasks, MCP, and web tools
-- A bundled VS Code extension for launch integration and theme support
-- A pixel-art hero companion who fires an arrow every time you press Enter (really — see [Meet your buddy](#meet-your-buddy))
+- Một CLI cho cả API đám mây lẫn mô hình AI chạy cục bộ.
+- Thiết lập nhà cung cấp theo hướng dẫn và lưu cấu hình bằng lệnh `/provider`.
+- Tích hợp quy trình lập trình với Bash, đọc/ghi/chỉnh sửa tệp, tìm kiếm mã, agent, task, MCP và công cụ web.
+- Có tiện ích mở rộng VS Code hỗ trợ khởi chạy và giao diện điều khiển.
+- Có nhân vật pixel-art đồng hành, phản hồi khi bạn gửi yêu cầu trong terminal.
 
-## Quick Start
+## Bắt đầu nhanh
 
-### Install
+### Yêu cầu hệ thống
 
-OpenClaude requires Node.js `>=24.22.1` for npm installs and runtime (Node 26 recommended/default). Bun is
-only needed for source builds and local development.
+- Node.js `>=24.22.1` để cài đặt và chạy bản npm; **Node.js 26 được khuyến nghị**.
+- Bun chỉ cần thiết khi biên dịch từ mã nguồn hoặc phát triển dự án.
+
+### Cài đặt
+
+Cài OpenClaude toàn cục bằng npm:
 
 ```bash
 npm install -g @twigpine/openclaude@latest
 ```
 
-**Upgrading from `@gitlawb/openclaude`?** The package moved to the `@twigpine`
-scope and the old one is no longer updated. Both packages provide the
-`openclaude` command, so npm refuses to install one over the other — remove
-the old one first:
+**Nếu đang nâng cấp từ `@gitlawb/openclaude`:** gói đã chuyển sang phạm vi `@twigpine` và gói cũ không còn được cập nhật. Hãy gỡ gói cũ trước khi cài gói mới:
 
 ```bash
 npm uninstall -g @gitlawb/openclaude
 npm install -g @twigpine/openclaude@latest
 ```
 
-Your settings and sessions (`~/.openclaude` and `~/.openclaude.json`) are not
-touched. Don't use `--force` to install over the old package instead: a later
-uninstall of the old one would then remove the `openclaude` command. If that
-happens, uninstall `@twigpine/openclaude` and install it again.
+Thao tác này không xóa cấu hình và phiên làm việc tại `~/.openclaude` và `~/.openclaude.json`. Không nên dùng `--force` để cài đè gói cũ, vì khi gỡ gói cũ sau đó, lệnh `openclaude` có thể bị xóa.
 
-If you're on Arch Linux, you can install OpenClaude from the community-maintained [AUR package](https://aur.archlinux.org/packages/openclaude):
+Người dùng Arch Linux cũng có thể cài từ gói AUR do cộng đồng duy trì:
+
 ```bash
 paru -S openclaude
 ```
 
-If the install later reports `ripgrep not found`, install ripgrep system-wide and confirm `rg --version` works in the same terminal before starting OpenClaude.
+Nếu gặp lỗi `ripgrep not found`, hãy cài ripgrep ở cấp hệ thống và xác nhận lệnh `rg --version` chạy được trong cùng terminal.
 
-**Verify / troubleshoot installed version:**
+Kiểm tra phiên bản và thông tin gói:
 
 ```bash
 openclaude --version
@@ -179,53 +88,45 @@ npm view @twigpine/openclaude dist-tags
 npm install -g @twigpine/openclaude@latest
 ```
 
-### Start
+### Khởi chạy
 
 ```bash
 openclaude
 ```
 
-Inside OpenClaude:
+Một số lệnh hữu ích trong OpenClaude:
 
-- run `/provider` for guided provider setup and saved profiles
-- run `/onboard-github` for GitHub Models onboarding
-- run `/search` to choose the web search backend (Exa by default) or add a search API key
+- `/provider`: thiết lập nhà cung cấp AI và quản lý cấu hình đã lưu.
+- `/onboard-github`: thiết lập GitHub Models.
+- `/search`: chọn dịch vụ tìm kiếm web, thêm API key hoặc kiểm tra cấu hình.
 
-> **Note:** OpenClaude does not automatically load project `.env` files. We recommend using the `/provider` command for setup, which saves provider profiles and credentials in `.openclaude-profile.json`. If you prefer environment variables, export them explicitly or run `openclaude --provider-env-file .env` for provider/setup variables. Export runtime/debug knobs from your shell or launcher.
+> **Lưu ý:** OpenClaude không tự động nạp các tệp `.env` của dự án. Nên dùng `/provider` để thiết lập và lưu hồ sơ nhà cung cấp trong `.openclaude-profile.json`. Nếu muốn dùng biến môi trường trong tệp, chạy `openclaude --provider-env-file .env`. Các biến dùng để gỡ lỗi hoặc điều chỉnh runtime cần được khai báo trong shell hoặc trình khởi chạy.
 
-### Resume or fork a conversation
+### Tiếp tục một cuộc trò chuyện
 
-Resume an existing conversation by session ID, or continue the most recent
-conversation in the current directory:
+Tiếp tục phiên theo ID hoặc tiếp tục cuộc trò chuyện gần nhất trong thư mục hiện tại:
 
 ```bash
 openclaude --resume <session-id>
 openclaude --continue
 ```
 
-Add `--fork-session` to branch the conversation history into a new session ID
-instead of reusing the original transcript:
+Thêm `--fork-session` để tạo phiên mới dựa trên lịch sử hội thoại:
 
 ```bash
 openclaude --resume <session-id> --fork-session
 openclaude --continue --fork-session
 ```
 
-Forking is conversation branching only. It does not create filesystem isolation,
-copy your working tree, or create a git worktree branch.
+Việc fork chỉ phân nhánh lịch sử hội thoại; không tạo môi trường tệp riêng, không sao chép working tree và không tạo nhánh Git worktree.
 
-### Manage saved conversations
+### Quản lý cuộc trò chuyện đã lưu
 
-Run `/sessions` inside OpenClaude to list this project's saved conversations.
-Press Enter on one to **Resume**, **Delete** (asks for confirmation, defaulting
-to Cancel), or go **Back** to the list. As a shortcut, press `d` on a row and
-then `d` again to delete it; any other key in between cancels. Deleting removes
-the transcript and its sidecar files from disk and cannot be undone. The
-session you are currently in is not listed and cannot be deleted.
+Chạy `/sessions` để xem các cuộc trò chuyện đã lưu của dự án. Chọn một mục để tiếp tục, xóa (có yêu cầu xác nhận) hoặc quay lại danh sách. Có thể nhấn `d` hai lần để xóa một mục; thao tác xóa không thể hoàn tác. Phiên đang sử dụng không xuất hiện trong danh sách này.
 
-### Background sessions
+### Chạy tác vụ nền
 
-Run long non-interactive prompts detached from the current terminal:
+Có thể chạy yêu cầu dài ở chế độ nền:
 
 ```bash
 openclaude --bg "fix failing tests"
@@ -236,47 +137,17 @@ openclaude logs auth-refactor -f
 openclaude kill auth-refactor
 ```
 
-Background sessions are local child processes. OpenClaude does not start a daemon
-or network service, and permission/provider/model/settings flags are passed to
-the child process the same way they are for a foreground `--print` run. Session
-metadata and logs are stored under the resolved OpenClaude config directory,
-usually `~/.openclaude/bg-sessions/`; `OPENCLAUDE_CONFIG_DIR` can point
-OpenClaude somewhere else. `CLAUDE_CONFIG_DIR` is ignored for OpenClaude
-background-session storage. Session names can be reused after older sessions
-reach a terminal state; use the session ID to inspect older logs with the same
-name. A naturally finished session is recorded as `exited` when its process
-returns zero and `failed` when it returns nonzero or handles a termination
-signal. `stale` remains the conservative result when the process disappears
-without an observed outcome; an explicit successful `openclaude kill` is
-recorded as `killed`, and `killed` takes precedence over a natural `exited` or
-`failed` outcome for the same process. Terminal outcomes are stored separately
-under `bg-sessions/terminal/`; deleting that directory makes finished sessions
-fall back to liveness-derived status. OpenClaude does not infer POSIX signal
-names on Windows.
-Unobservable force termination, host crashes, and power loss remain `stale` on
-every platform.
+Các phiên nền là tiến trình con chạy trên máy cục bộ, không phải daemon hay dịch vụ mạng. Nhật ký và thông tin phiên thường nằm trong `~/.openclaude/bg-sessions/`; có thể đổi thư mục cấu hình bằng `OPENCLAUDE_CONFIG_DIR`. Lệnh `openclaude attach <id-or-name>` hiện chỉ hiển thị phiên phù hợp và hướng dẫn dùng `openclaude logs <id> -f`; chức năng gắn lại trực tiếp vào terminal chưa được triển khai cho phiên nền cục bộ.
 
-`openclaude attach <id-or-name>` currently reports the matching session and
-points to `openclaude logs <id> -f`; full terminal reattach is not implemented
-for local background sessions yet.
+### Thư mục cấu hình
 
-### OpenClaude config cutover
+Theo mặc định, OpenClaude lưu cấu hình tại `~/.openclaude` và `~/.openclaude.json`. Công cụ không đọc `~/.claude`, thư mục `.claude/` của dự án hoặc `CLAUDE_CONFIG_DIR`; bạn không cần cài Claude Code để bắt đầu sử dụng OpenClaude.
 
-OpenClaude stores its own config under `~/.openclaude` and `~/.openclaude.json`
-by default. It does not read `~/.claude`, project `.claude/` directories, or
-`CLAUDE_CONFIG_DIR`; new users can start with an empty OpenClaude config and do
-not need Claude Code installed.
+Nếu trước đây đã lưu tệp OpenClaude trong đường dẫn `.claude`, hãy chuyển thủ công những thiết lập, lệnh, agent, skill hoặc tác vụ do chính bạn tạo sang vị trí tương ứng trong `.openclaude`. Không sao chép toàn bộ thư mục `.claude` và không sao chép thông tin xác thực của Claude Code.
 
-If you previously used OpenClaude with `.claude` paths, migrate intentionally:
-copy only the settings, commands, agents, skills, scheduled tasks, or other files
-you personally created for OpenClaude into the matching `.openclaude` location.
-Do not blanket-copy `.claude`, and do not copy Claude Code credentials or auth
-files. For provider authentication, prefer running OpenClaude's provider setup
-again or exporting provider-specific environment variables.
+### Cấu hình OpenAI nhanh
 
-### Fastest OpenAI setup
-
-macOS / Linux:
+**macOS / Linux:**
 
 ```bash
 export CLAUDE_CODE_USE_OPENAI=1
@@ -286,7 +157,7 @@ export OPENAI_MODEL=gpt-4o
 openclaude
 ```
 
-Windows PowerShell:
+**Windows PowerShell:**
 
 ```powershell
 $env:CLAUDE_CODE_USE_OPENAI="1"
@@ -296,9 +167,11 @@ $env:OPENAI_MODEL="gpt-4o"
 openclaude
 ```
 
-### Fastest local Ollama setup
+Thay `sk-your-key-here` bằng API key hợp lệ của nhà cung cấp bạn sử dụng. Không chia sẻ API key công khai.
 
-macOS / Linux:
+### Cấu hình Ollama chạy cục bộ
+
+**macOS / Linux:**
 
 ```bash
 export CLAUDE_CODE_USE_OPENAI=1
@@ -308,7 +181,7 @@ export OPENAI_MODEL=qwen2.5-coder:7b
 openclaude
 ```
 
-Windows PowerShell:
+**Windows PowerShell:**
 
 ```powershell
 $env:CLAUDE_CODE_USE_OPENAI="1"
@@ -318,179 +191,154 @@ $env:OPENAI_MODEL="qwen2.5-coder:7b"
 openclaude
 ```
 
-For Ollama, OpenClaude uses Ollama's native chat API and requests a 32768-token
-context window on each chat request so same-session history is not silently
-truncated by Ollama's OpenAI-compatible shim. Set `OPENCLAUDE_OLLAMA_NUM_CTX`
-or `OLLAMA_CONTEXT_LENGTH` if you need a different request-level context size.
-See [Advanced Setup](docs/advanced-setup.md#ollama-context-length) for
-verification with `ollama ps`.
+Với Ollama, OpenClaude sử dụng API chat gốc của Ollama và mặc định yêu cầu cửa sổ ngữ cảnh 32768 token cho mỗi yêu cầu chat. Có thể điều chỉnh bằng `OPENCLAUDE_OLLAMA_NUM_CTX` hoặc `OLLAMA_CONTEXT_LENGTH`. Xem [hướng dẫn cấu hình nâng cao](docs/advanced-setup.md#ollama-context-length).
 
-## Setup Guides
+## Hướng dẫn cài đặt
 
-Beginner-friendly guides:
-
-- [Non-Technical Setup](docs/non-technical-setup.md)
-- [Windows Quick Start](docs/quick-start-windows.md)
-- [macOS / Linux Quick Start](docs/quick-start-mac-linux.md)
-
-Advanced and source-build guides:
-
-- [Advanced Setup](docs/advanced-setup.md)
-- [Smart Auto-Routing](docs/smart-routing.md)
-- [Agent Routing and Step Limits](docs/agent-routing.md)
-- [Headless gRPC Server](docs/grpc-server.md)
-- [Repo Map (codebase intelligence)](docs/repo-map.md)
+- [Hướng dẫn cho người không chuyên kỹ thuật](docs/non-technical-setup.md)
+- [Bắt đầu nhanh trên Windows](docs/quick-start-windows.md)
+- [Bắt đầu nhanh trên macOS / Linux](docs/quick-start-mac-linux.md)
+- [Cấu hình nâng cao](docs/advanced-setup.md)
+- [Tự động định tuyến thông minh](docs/smart-routing.md)
+- [Định tuyến agent và giới hạn bước](docs/agent-routing.md)
+- [Máy chủ gRPC không giao diện](docs/grpc-server.md)
+- [Sơ đồ cấu trúc mã nguồn](docs/repo-map.md)
 - [Skills](docs/skills.md)
-- [Android Install](ANDROID_INSTALL.md)
+- [Cài đặt trên Android](ANDROID_INSTALL.md)
 
-## Supported Providers
+## Các nhà cung cấp được hỗ trợ
 
-| Provider | Setup Path | Notes |
+Có thể thiết lập nhà cung cấp qua lệnh `/provider`, biến môi trường hoặc hướng dẫn tương ứng. Danh sách và khả năng hỗ trợ có thể thay đổi theo phiên bản.
+
+| Nhà cung cấp | Cách thiết lập | Ghi chú |
 | --- | --- | --- |
-| OpenAI-compatible | `/provider` or env vars | Works with OpenAI, OpenRouter, DeepSeek, Groq, Mistral, LM Studio, and other compatible `/v1` servers |
-| Z.AI GLM Coding Plan | `/provider` or OpenAI-compatible env vars | Uses `OPENAI_API_KEY` at `https://api.z.ai/api/coding/paas/v4`, defaults to `glm-5.2`, and offers the vision-capable `glm-5.3-flash` option |
-| AI/ML API | `/provider` or `AIMLAPI_API_KEY` ([setup guide](docs/aimlapi-setup.md)) | Uses `https://api.aimlapi.com/v1`, auto-detects the OpenAI-compatible route from `AIMLAPI_API_KEY`, sends OpenClaude attribution headers, and discovers chat-capable models from the public `/models` catalog |
-| Merge Gateway | `/provider` or `MERGE_GATEWAY_API_KEY` ([setup guide](docs/merge-gateway-setup.md)) | Multi-provider model router at `https://api-gateway.merge.dev/v1/openai`; supports Chat Completions, Responses, authenticated model discovery, and routing policies |
-| Concentrate | `/provider` or `CONCENTRATE_API_KEY` | Unified OpenAI-compatible gateway at `https://api.concentrate.ai/v1`; defaults to `deepseek-v4-flash` and auto-discovers the chat model catalog |
-| LLMTR | `/provider` or OpenAI-compatible env vars | Multi-model gateway at `https://llmtr.com/v1`; `/provider` and `--provider llmtr` default to `deepseek/deepseek-v4-flash`, while raw env setup must set `OPENAI_BASE_URL=https://llmtr.com/v1` and `OPENAI_MODEL`; accepts `LLMTR_API_KEY` or `OPENAI_API_KEY` after the route is selected and discovers tool-capable Chat Completions models from the public catalog |
-| Command Code | `/provider` or OpenAI-compatible env vars | Hybrid OpenAI-compatible gateway at `https://api.commandcode.ai/provider/v1`; `/provider` and `--provider commandcode` default to `deepseek/deepseek-v4-flash`, while raw env setup must set `OPENAI_BASE_URL=https://api.commandcode.ai/provider/v1` and `OPENAI_MODEL`; requires `CMD_API_KEY`, `COMMANDCODE_API_KEY`, or the official `COMMAND_CODE_API_KEY` after the route is selected and discovers Chat Completions models from the public catalog. Claude models are unsupported by this Chat Completions integration |
-| ApiSmart | `/provider` or `APISMART_API_KEY` | Uses `https://gw.apismart.ai/v1`, defaults to `DEEPSEEK_V4_FLASH`, and supports optional `APISMART_MODEL` plus authenticated model discovery |
-| API Route | `/provider` or `API_ROUTE_API_KEY` | Uses `https://global.api-route.com/v1`, defaults to `claude-sonnet-4-6`, and supports optional `API_ROUTE_MODEL` plus authenticated model discovery |
-| GMI Cloud | `/provider`, `--provider gmi-cloud`, or env vars | Uses `GMI_API_KEY` at `https://api.gmi-serving.com/v1` and defaults to `Qwen/Qwen3.8-Max`; `--provider gmi-cloud` also reads an optional `GMI_MODEL`, and the model list comes from authenticated discovery |
-| Hicap | `/provider` or OpenAI-compatible env vars | Uses `api-key` auth, discovers models from unauthenticated `/models`, and supports Responses mode for `gpt-` models |
-| Fireworks AI | `/provider` or env vars | First-class provider with 276 curated models (DeepSeek, Qwen, Llama, Gemma, and more); uses `FIREWORKS_API_KEY` |
-| LongCat | `/provider` or env vars | Meituan LongCat OpenAI-compatible API at `https://api.longcat.chat/openai/v1`; uses `LONGCAT_API_KEY` and defaults to `LongCat-2.0` |
-| ClinePass | `/provider` or env vars | AI model gateway with usage limits (5hr, weekly, monthly); uses `CLINE_API_KEY` at `https://api.cline.bot/api/v1` |
-| Gemini | `/provider` or env vars | Supports API key only |
-| Gemini on Vertex AI | `--provider gemini-vertex` or env vars | Native Gemini requests with Google ADC or an access token; [setup](docs/advanced-setup.md#gemini-on-vertex-ai-native) |
-| GitHub Models | `/onboard-github` | Interactive onboarding with saved credentials |
-| Codex OAuth | `/provider` | Opens ChatGPT sign-in in your browser and stores Codex credentials securely |
-| Codex | `/provider` | Uses existing Codex CLI auth, OpenClaude secure storage, or env credentials |
-| Twigpine Opengateway | Startup default, `/provider`, or env vars | Smart gateway at `https://opengateway.gitlawb.com/v1`; requires an API key from https://gitlawb.com/opengateway/keys and routes Xiaomi MiMo and other partner models by `OPENAI_MODEL` |
-| OpenCode Zen | `/provider` or env vars | Pay-as-you-go AI gateway; uses `OPENCODE_API_KEY` via `https://opencode.ai/zen/v1`; shared key with OpenCode Go |
-| OpenCode Go | `/provider` or env vars | $10/mo subscription for open models (13 models); uses `OPENCODE_API_KEY` via `https://opencode.ai/zen/go/v1`; shared key with OpenCode Zen |
-| Xiaomi MiMo | `/provider` or env vars | OpenAI-compatible API at `https://mimo.mi.com`; uses `MIMO_API_KEY` and defaults to `mimo-v2.5-pro` |
-| NEAR AI | `/provider` or env vars | Unified gateway (Claude, GPT, Gemini + TEE open models); uses `NEARAI_API_KEY` at `https://cloud-api.near.ai/v1` |
-| Cloudflare Workers AI | `/provider` or env vars | OpenAI-compatible API at `https://api.cloudflare.com/client/v4/accounts/<ACCOUNT_ID>/ai/v1`; uses `CLOUDFLARE_API_TOKEN`. Replace `<ACCOUNT_ID>` with your Cloudflare account id. |
-| Ollama | `/provider` or env vars | Local inference with no API key |
-| Atomic Chat | `/provider`, env vars, or `bun run dev:atomic-chat` | Local Model Provider; auto-detects loaded models |
-| Bedrock / Vertex / Foundry | env vars | Anthropic-family cloud routes; Vertex is for Claude on Vertex AI, not arbitrary Model Garden models |
+| API tương thích OpenAI | `/provider` hoặc biến môi trường | Hỗ trợ OpenAI, OpenRouter, DeepSeek, Groq, Mistral, LM Studio và các máy chủ tương thích endpoint `/v1`. |
+| Z.AI GLM Coding Plan | `/provider` hoặc biến môi trường tương thích OpenAI | Dùng `OPENAI_API_KEY` tại `https://api.z.ai/api/coding/paas/v4`; mặc định `glm-5.2`, có lựa chọn hỗ trợ hình ảnh `glm-5.3-flash`. |
+| AI/ML API | `/provider` hoặc `AIMLAPI_API_KEY` | [Hướng dẫn](docs/aimlapi-setup.md); dùng `https://api.aimlapi.com/v1` và tự phát hiện các mô hình chat tương thích. |
+| Merge Gateway | `/provider` hoặc `MERGE_GATEWAY_API_KEY` | [Hướng dẫn](docs/merge-gateway-setup.md); cổng định tuyến đa nhà cung cấp, hỗ trợ Chat Completions, Responses và chính sách định tuyến. |
+| Concentrate | `/provider` hoặc `CONCENTRATE_API_KEY` | Cổng tương thích OpenAI tại `https://api.concentrate.ai/v1`; mặc định `deepseek-v4-flash`. |
+| LLMTR | `/provider` hoặc biến môi trường tương thích OpenAI | Cổng đa mô hình tại `https://llmtr.com/v1`; mặc định `deepseek/deepseek-v4-flash` khi dùng cấu hình tương ứng. |
+| Command Code | `/provider` hoặc biến môi trường tương thích OpenAI | Cổng tại `https://api.commandcode.ai/provider/v1`; cần API key Command Code. Tích hợp Chat Completions này không hỗ trợ mô hình Claude. |
+| ApiSmart | `/provider` hoặc `APISMART_API_KEY` | Dùng `https://gw.apismart.ai/v1`; mặc định `DEEPSEEK_V4_FLASH`. |
+| API Route | `/provider` hoặc `API_ROUTE_API_KEY` | Dùng `https://global.api-route.com/v1`; mặc định `claude-sonnet-4-6`. |
+| GMI Cloud | `/provider`, `--provider gmi-cloud` hoặc biến môi trường | Dùng `GMI_API_KEY` tại `https://api.gmi-serving.com/v1`; mặc định `Qwen/Qwen3.8-Max`. |
+| Hicap | `/provider` hoặc biến môi trường tương thích OpenAI | Tự phát hiện mô hình từ endpoint `/models`; hỗ trợ chế độ Responses cho mô hình `gpt-`. |
+| Fireworks AI | `/provider` hoặc biến môi trường | Có danh sách mô hình được tuyển chọn; dùng `FIREWORKS_API_KEY`. |
+| LongCat | `/provider` hoặc biến môi trường | API tương thích OpenAI tại `https://api.longcat.chat/openai/v1`; dùng `LONGCAT_API_KEY`. |
+| ClinePass | `/provider` hoặc biến môi trường | Cổng mô hình AI có giới hạn sử dụng theo thời gian; dùng `CLINE_API_KEY`. |
+| Gemini | `/provider` hoặc biến môi trường | Hỗ trợ API key. |
+| Gemini trên Vertex AI | `--provider gemini-vertex` hoặc biến môi trường | Gửi yêu cầu Gemini gốc bằng Google ADC hoặc access token; xem [hướng dẫn](docs/advanced-setup.md#gemini-on-vertex-ai-native). |
+| GitHub Models | `/onboard-github` | Có quy trình thiết lập tương tác và lưu thông tin xác thực. |
+| Codex OAuth | `/provider` | Đăng nhập ChatGPT trong trình duyệt và lưu thông tin Codex an toàn. |
+| Codex | `/provider` | Dùng xác thực từ Codex CLI, bộ lưu trữ an toàn của OpenClaude hoặc biến môi trường. |
+| Twigpine Opengateway | Mặc định khi khởi chạy, `/provider` hoặc biến môi trường | Cổng tại `https://opengateway.gitlawb.com/v1`; cần API key từ [Opengateway](https://gitlawb.com/opengateway/keys). |
+| OpenCode Zen | `/provider` hoặc biến môi trường | Cổng AI trả phí theo mức sử dụng; dùng `OPENCODE_API_KEY` qua `https://opencode.ai/zen/v1`. |
+| OpenCode Go | `/provider` hoặc biến môi trường | Gói thuê bao cho các mô hình mở; dùng `OPENCODE_API_KEY` qua `https://opencode.ai/zen/go/v1`. |
+| Xiaomi MiMo | `/provider` hoặc biến môi trường | API tương thích OpenAI tại `https://mimo.mi.com`; dùng `MIMO_API_KEY`. |
+| NEAR AI | `/provider` hoặc biến môi trường | Cổng thống nhất hỗ trợ Claude, GPT, Gemini và mô hình mở TEE; dùng `NEARAI_API_KEY`. |
+| Cloudflare Workers AI | `/provider` hoặc biến môi trường | Endpoint tương thích OpenAI; dùng `CLOUDFLARE_API_TOKEN` và thay `<ACCOUNT_ID>` bằng ID tài khoản Cloudflare. |
+| Ollama | `/provider` hoặc biến môi trường | Chạy suy luận AI cục bộ, không cần API key cho máy chủ cục bộ. |
+| Atomic Chat | `/provider`, biến môi trường hoặc `bun run dev:atomic-chat` | Nhà cung cấp mô hình cục bộ; tự phát hiện mô hình đã tải. |
+| Bedrock / Vertex / Foundry | Biến môi trường | Các tuyến đám mây thuộc hệ sinh thái Anthropic; Vertex ở đây dành cho Claude trên Vertex AI. |
 
-## What Works
+## Các tính năng chính
 
-- **Tool-driven coding workflows**: Bash, file read/write/edit, grep, glob, agents, tasks, MCP, and slash commands
-- **Streaming responses**: Real-time token output and tool progress
-- **Tool calling**: Multi-step tool loops with model calls, tool execution, and follow-up responses
-- **Images**: URL and base64 image inputs for providers that support vision. Paste from the clipboard with Ctrl+V (Alt+V on Windows). 1080p/4K screenshots still attach. If processing fails and the image is over the 5MB payload limit or the 8000px API edge, the prompt shows that error instead of "No image found". For Anthropic requests containing more than 20 images (including retained conversation history and tool results), local images must fit within 2000×2000 pixels. On Amazon Bedrock and Google Cloud Vertex AI, document blocks also count toward that 20-block threshold. OpenClaude attempts to resize them before sending; if processing cannot produce a compliant image, it reports an actionable error rather than silently dropping attachments. Resize the affected images or start a new conversation with fewer images (or documents on those partners).
-- **Provider profiles**: Guided setup plus saved user-level provider profile support
-- **Local and remote model backends**: Cloud APIs, local servers, and Apple Silicon local inference
-- **Codebase intelligence (repo map)**: Structural map of the repository ranked by PageRank importance, auto-injected into context when the `REPO_MAP` flag is enabled or the `REPO_MAP` environment variable is set. Inspect with `/repomap` (2048-token default). See [docs/repo-map.md](docs/repo-map.md) for details.
-- **A companion with signature moves**: A truecolor pixel-art hero who lives beside your prompt and reacts when you work. See below.
+- **Quy trình lập trình dựa trên công cụ:** Bash, đọc/ghi/chỉnh sửa tệp, grep, glob, agent, task, MCP và lệnh slash.
+- **Phản hồi trực tuyến:** Hiển thị nội dung và tiến trình sử dụng công cụ theo thời gian thực.
+- **Gọi công cụ nhiều bước:** Mô hình có thể gọi công cụ, nhận kết quả và tiếp tục xử lý.
+- **Hình ảnh:** Hỗ trợ đầu vào hình ảnh bằng URL hoặc base64 ở các nhà cung cấp có khả năng xử lý hình ảnh. Có thể dán ảnh từ clipboard bằng Ctrl+V (Alt+V trên Windows). Giới hạn và yêu cầu kích thước phụ thuộc nhà cung cấp; nếu ảnh không đáp ứng yêu cầu, OpenClaude sẽ thông báo lỗi để người dùng xử lý.
+- **Hồ sơ nhà cung cấp:** Thiết lập theo hướng dẫn và lưu cấu hình ở cấp người dùng.
+- **Mô hình cục bộ và từ xa:** Dùng API đám mây, máy chủ cục bộ hoặc suy luận trên Apple Silicon.
+- **Sơ đồ mã nguồn (repo map):** Tạo bản đồ cấu trúc repository, xếp hạng tầm quan trọng bằng PageRank và có thể tự thêm vào ngữ cảnh khi bật cờ `REPO_MAP`. Dùng `/repomap` để xem; mặc định 2048 token. Xem [docs/repo-map.md](docs/repo-map.md).
+- **Nhân vật đồng hành:** Nhân vật pixel-art xuất hiện cạnh lời nhắc và phản hồi khi làm việc.
 
-## Meet Your Buddy
+## Nhân vật đồng hành
 
-Run `/buddy` to hatch a companion — a truecolor pixel-art hero who stands
-beside your prompt, idles, blinks, and fires their signature move every time
-you submit a message:
-
-```
-/buddy                  hatch (first run) or pet your companion
-/buddy set robinhood    the green archer — arrow shot on every Enter
-/buddy set kaio         gold-haired warrior — charges a full-width energy wave
-/buddy set strawhat     stretchy punch that snaps back
-/buddy set merlin       twinkling sparkle stream
-/buddy set kage         spinning shuriken
-/buddy set ember        dragon fire with a real heat gradient
-/buddy set corsair      cannonball with smoke trail
-/buddy name Robin       rename your companion
-/buddy set random       back to your rolled hero
-```
-
-Companions respect `prefersReducedMotion`, degrade gracefully to line art in
-low-color terminals, and can be silenced with `/buddy mute`. Requires a
-terminal at least 100 columns wide for the full sprite.
-
-## Provider Notes
-
-OpenClaude supports multiple providers, but behavior is not identical across all of them.
-
-- Anthropic-specific features may not exist on other providers
-- Tool quality depends heavily on the selected model
-- Smaller local models can struggle with long multi-step tool flows
-- Some providers impose lower output caps than the CLI defaults, and OpenClaude adapts where possible
-- AI/ML API uses the OpenAI-compatible route, defaults to `gpt-4o`, and only surfaces chat-capable models from its public catalog
-- Twigpine Opengateway is the fresh-install startup default and requires an API key from https://gitlawb.com/opengateway/keys. It uses one OpenAI-compatible base URL; switch between `mimo-*` and `google/gemini-3.1-flash-lite-preview` with `/model`, and do not pin the base URL to `/v1/xiaomi-mimo`.
-- Z.AI GLM Coding Plan uses `https://api.z.ai/api/coding/paas/v4` with `glm-5.2` by default. On that direct route, GLM-5.3-Flash is selectable as `glm-5.3-flash` and accepts image input. Its OpenClaude effort choices are `low`, `high`, and `xhigh`, with `xhigh` requesting Z.AI `max`; GLM-5.3 and the existing GLM-5.2 query controls remain supported. These capabilities are not claimed for gateways that happen to carry the same model name.
-- Xiaomi MiMo uses `api-key` header auth on the direct OpenAI-compatible route and currently does not support `/usage` reporting in OpenClaude
-- GitHub Copilot serializes sub-agent execution by default to reduce Premium Request consumption — see [Agent Routing and Step Limits](docs/agent-routing.md#github-copilot-sub-agent-optimization) for tuning
-
-For best results, use models with strong tool/function calling support.
-
-
-
-## Agents
-
-Route different agents to different models (cost optimization, splitting work
-by model strength), cap sub-agent tool steps with `maxSteps`, and tune GitHub
-Copilot sub-agent behavior. Configured via settings, agent frontmatter, and
-environment variables:
-
-- per-agent provider/model overrides via `agentModels` + `agentRouting` in `~/.openclaude/settings.json`
-- model-only routes that reuse your current provider's credentials
-- built-in agents (`Explore` and `Plan` [feature-gated], `verification` [feature-gated: requires `VERIFICATION_AGENT` + `tengu_hive_evidence`], `code-reviewer` [requires diff inline]) routable by type name
-
-See [Agent Routing and Step Limits](docs/agent-routing.md) for the full guide.
-
-## Web Search and Fetch
-
-[Exa](https://exa.ai) is the default web search backend. With no setup, `WebSearch` on non-Anthropic models uses Exa's keyless free tier, which has per-second and daily limits. Run `/search` to pick a backend, add an API key, or test search:
+Chạy `/buddy` để tạo nhân vật pixel-art. Nhân vật có thể đứng cạnh lời nhắc, chuyển động và thực hiện hiệu ứng khi bạn gửi tin nhắn.
 
 ```text
-/search              # pick a backend
-/search key exa      # add an Exa API key (hidden input) for higher limits
-/search remove-key   # remove a saved Exa key
-/search status       # show which backend handles searches
-/search test         # run a test search
-/search anysearch    # select AnySearch (works without a key)
-/search key anysearch # optionally add an AnySearch API key in the hidden input
+/buddy                  tạo nhân vật lần đầu hoặc tương tác với nhân vật
+/buddy set robinhood    cung thủ xanh — bắn tên mỗi lần nhấn Enter
+/buddy set kaio         chiến binh tóc vàng — tạo làn sóng năng lượng
+/buddy set strawhat      tung cú đấm co giãn
+/buddy set merlin       tạo hiệu ứng lấp lánh
+/buddy set kage         ném phi tiêu shuriken
+/buddy set ember        tạo hiệu ứng lửa rồng
+/buddy set corsair      bắn đại bác kèm khói
+/buddy name Robin       đổi tên nhân vật
+/buddy set random       chọn ngẫu nhiên nhân vật khác
 ```
 
-Other backends in the auto chain that you configure with a key (Tavily, Brave, Firecrawl, …) run before the Exa free tier, and DuckDuckGo is the last-resort fallback. When the active provider is Ollama, OpenClaude uses the signed-in local Ollama Web Search endpoint ahead of the free tier. Set `OLLAMA_API_KEY` to enable the hosted Ollama endpoint as a fallback. Set `EXA_FREE_TIER=0` if searches should never go to Exa without a key. See [Web Search Providers](src/tools/WebSearchTool/README_SEARCH_PROVIDERS.md) for every backend and option.
+Nhân vật tôn trọng cài đặt `prefersReducedMotion`, chuyển sang hình nét đơn trong terminal ít màu và có thể tắt âm/hiệu ứng bằng `/buddy mute`. Cần terminal rộng ít nhất 100 cột để hiển thị sprite đầy đủ.
 
-AnySearch is available as an explicit backend with `/search anysearch` or `WEB_SEARCH_PROVIDER=anysearch`. `ANYSEARCH_API_KEY` is optional; anonymous access has lower service limits. Set `ANYSEARCH_MAX_RESULTS` to an integer from 1 to 10 (default 10) to control the requested result count. AnySearch does not change the `auto` search order.
+## Lưu ý về nhà cung cấp mô hình
 
-> **Note:** DuckDuckGo fallback works by scraping search results and may be rate-limited, blocked, or subject to DuckDuckGo's Terms of Service.
+Các nhà cung cấp không có hành vi hoàn toàn giống nhau:
 
-For Anthropic-native backends and Codex responses, OpenClaude keeps the native provider web search behavior unless you pick a specific backend with `/search` (for example `/search exa`).
+- Một số tính năng riêng của Anthropic có thể không có ở nhà cung cấp khác.
+- Chất lượng sử dụng công cụ phụ thuộc nhiều vào mô hình được chọn.
+- Mô hình cục bộ nhỏ có thể gặp khó khăn với chuỗi tác vụ dài, nhiều bước.
+- Một số dịch vụ giới hạn số token đầu ra; OpenClaude sẽ điều chỉnh khi có thể.
+- Twigpine Opengateway là lựa chọn mặc định khi cài mới và cần API key từ [Opengateway](https://gitlawb.com/opengateway/keys).
+- Khả năng của một mô hình cụ thể có thể khác nhau tùy cổng API. Không nên suy ra tính năng của một cổng chỉ dựa vào tên mô hình.
+- Xiaomi MiMo hiện chưa hỗ trợ báo cáo `/usage` trong OpenClaude trên tuyến OpenAI-compatible trực tiếp.
+- GitHub Copilot mặc định tuần tự hóa việc chạy sub-agent để giảm mức tiêu thụ Premium Request. Xem [Định tuyến agent và giới hạn bước](docs/agent-routing.md#github-copilot-sub-agent-optimization).
 
-To select Ollama search explicitly, use `WEB_SEARCH_PROVIDER=ollama`. A local Ollama route uses its configured `OPENAI_BASE_URL` or `OLLAMA_BASE_URL`; hosted search sends `OLLAMA_API_KEY` only to `https://ollama.com/api/web_search`.
+Để đạt kết quả tốt, nên chọn mô hình có khả năng gọi công cụ/hàm tốt.
 
-`WebFetch` works, but its basic HTTP plus HTML-to-markdown path can still fail on JavaScript-rendered sites or sites that block plain HTTP requests.
+## Agent và định tuyến mô hình
 
-Set a [Firecrawl](https://firecrawl.dev) API key if you want Firecrawl-powered search/fetch behavior:
+Có thể định tuyến từng agent sang mô hình khác nhau để tối ưu chi phí hoặc phân chia công việc theo thế mạnh của mô hình, giới hạn số bước công cụ của sub-agent bằng `maxSteps`, và điều chỉnh hành vi sub-agent của GitHub Copilot.
+
+Cấu hình có thể nằm trong `agentModels` và `agentRouting` tại `~/.openclaude/settings.json`, phần frontmatter của agent hoặc biến môi trường. Các agent tích hợp gồm `Explore` và `Plan` (phụ thuộc cờ tính năng), `verification` (cần `VERIFICATION_AGENT` và `tengu_hive_evidence`) cùng `code-reviewer` (cần diff inline).
+
+Xem [hướng dẫn định tuyến agent và giới hạn bước](docs/agent-routing.md).
+
+## Tìm kiếm và tải nội dung web
+
+Exa là dịch vụ tìm kiếm web mặc định. Với một số mô hình không phải Anthropic, OpenClaude có thể dùng gói miễn phí không cần API key của Exa; gói này có giới hạn theo giây và theo ngày. Chạy `/search` để chọn dịch vụ, thêm API key hoặc kiểm tra trạng thái:
+
+```text
+/search                # chọn dịch vụ tìm kiếm
+/search key exa        # thêm API key Exa (ô nhập được ẩn)
+/search remove-key     # xóa API key Exa đã lưu
+/search status         # xem dịch vụ đang sử dụng
+/search test           # thử tìm kiếm
+/search anysearch      # chọn AnySearch
+/search key anysearch  # tùy chọn thêm API key AnySearch
+```
+
+Các dịch vụ khác như Tavily, Brave và Firecrawl có thể được ưu tiên khi đã cấu hình key; DuckDuckGo là phương án dự phòng cuối. Khi dùng Ollama, OpenClaude ưu tiên endpoint Ollama Web Search nếu đã đăng nhập cục bộ. Đặt `OLLAMA_API_KEY` để bật endpoint Ollama lưu trữ làm phương án dự phòng. Đặt `EXA_FREE_TIER=0` nếu không muốn tìm kiếm qua Exa khi chưa có key.
+
+AnySearch có thể được chọn bằng `/search anysearch` hoặc `WEB_SEARCH_PROVIDER=anysearch`. `ANYSEARCH_API_KEY` là tùy chọn; truy cập ẩn danh có giới hạn thấp hơn. `ANYSEARCH_MAX_RESULTS` nhận số nguyên từ 1 đến 10, mặc định là 10. Xem [tài liệu các nhà cung cấp tìm kiếm web](src/tools/WebSearchTool/README_SEARCH_PROVIDERS.md).
+
+> **Lưu ý:** Phương án DuckDuckGo dự phòng có thể bị giới hạn tốc độ, chặn hoặc chịu điều khoản dịch vụ của DuckDuckGo.
+
+Với các backend gốc của Anthropic và Codex Responses, OpenClaude giữ cơ chế tìm kiếm web gốc trừ khi bạn chọn backend cụ thể qua `/search`. Để chọn tìm kiếm Ollama, dùng `WEB_SEARCH_PROVIDER=ollama`.
+
+`WebFetch` hỗ trợ tải nội dung, nhưng phương pháp HTTP cơ bản kết hợp chuyển HTML sang Markdown có thể không hoạt động trên trang cần JavaScript hoặc chặn yêu cầu HTTP thông thường.
+
+Nếu muốn dùng Firecrawl cho tìm kiếm/tải nội dung, hãy khai báo API key:
 
 ```bash
 export FIRECRAWL_API_KEY=your-key-here
 ```
 
-With Firecrawl enabled:
+Khi Firecrawl được bật, `WebSearch` có thể dùng API tìm kiếm Firecrawl và `WebFetch` có thể dùng endpoint scrape để xử lý trang web được dựng bằng JavaScript. API key là tùy chọn; xem [Firecrawl](https://firecrawl.dev) để biết thông tin gói miễn phí.
 
-- `WebSearch` can use Firecrawl's search API while the Exa free tier remains the default free path for non-Claude models
-- `WebFetch` uses Firecrawl's scrape endpoint instead of raw HTTP, handling JS-rendered pages correctly
+## Máy chủ gRPC không giao diện
 
-Free tier at [firecrawl.dev](https://firecrawl.dev) includes 500 credits. The key is optional.
+OpenClaude có thể chạy như một dịch vụ gRPC không giao diện với streaming hai chiều, giúp tích hợp khả năng agent vào ứng dụng khác, pipeline CI/CD hoặc giao diện tùy chỉnh.
 
-## Headless gRPC Server
+```bash
+npm run dev:grpc
+```
 
-OpenClaude can run as a headless gRPC service with bidirectional streaming —
-integrate its agentic capabilities into other applications, CI/CD pipelines,
-or custom UIs. Start it with `npm run dev:grpc`; a test CLI client ships with
-the repo. See [Headless gRPC Server](docs/grpc-server.md) for configuration
-and client generation from `src/proto/openclaude.proto`.
+Repository có kèm CLI thử nghiệm. Xem [hướng dẫn máy chủ gRPC](docs/grpc-server.md) để cấu hình và tạo client từ `src/proto/openclaude.proto`.
 
-## Development
+## Phát triển dự án
 
-Use Node.js `>=24.22.1` (Node 26 recommended/default) and Bun `1.4.4` for source builds.
+Yêu cầu: Node.js `>=24.22.1` (khuyến nghị Node 26) và Bun `1.4.4` để biên dịch từ mã nguồn.
 
 ```bash
 bun install
@@ -498,83 +346,70 @@ bun run build
 node dist/cli.mjs
 ```
 
-Day-to-day commands:
+Các lệnh phát triển thường dùng:
 
-- `bun run dev` — build and launch from source
-- `bun test` — full unit suite (Bun's built-in runner)
-- `bun test path/to/file.test.ts` — focused runs for the areas you touch
-- `bun run test:coverage` — coverage to `coverage/lcov.info` plus a visual report at `coverage/index.html` (`bun run test:coverage:ui` rebuilds just the UI)
-- `bun run smoke` — smoke checks
-- `bun run doctor:runtime`, `bun run verify:privacy`; for PR intent scanning, use the fresh-upstream, explicit-ref workflow in the [local pre-push validation contract](CONTRIBUTING.md#validation)
+- `bun run dev`: biên dịch và chạy từ mã nguồn.
+- `bun test`: chạy toàn bộ unit test bằng bộ chạy tích hợp của Bun.
+- `bun test path/to/file.test.ts`: chạy test cho một tệp cụ thể.
+- `bun run test:coverage`: tạo báo cáo coverage tại `coverage/lcov.info` và báo cáo trực quan tại `coverage/index.html`.
+- `bun run test:coverage:ui`: dựng lại riêng giao diện báo cáo coverage.
+- `bun run smoke`: chạy kiểm tra smoke.
+- `bun run doctor:runtime`, `bun run verify:privacy`: kiểm tra runtime và quyền riêng tư.
+- `bun run test:provider`, `bun run test:provider-recommendation`: chạy các bộ test liên quan đến nhà cung cấp.
 
-Focused suites: `bun run test:provider`, `bun run test:provider-recommendation`.
-
-To benchmark the launcher module compile cache, build the CLI and run:
+Đo hiệu năng biên dịch cache của launcher:
 
 ```bash
 bun run build
 bun run benchmark:startup
 ```
 
-The benchmark and built OpenClaude launcher require Node `>=24.22.1`;
-Node 26 is recommended/default.
+Có thể tăng số lần chạy mẫu:
 
-The benchmark defaults to 30 separate-process warm runs and 10 isolated
-empty-cache runs. It reports the median, IQR, MAD, first cache-populating run,
-first warm-up, Node/OS/CPU details, bundle size, and commit. Direct bundle
-timings are included only as a secondary diagnostic; the full launcher result
-is the decision signal. Use
-`bun run benchmark:startup -- --warm-runs 40 --cold-runs 10` to request a
-larger sample set. The benchmark records results without enforcing a timing
-threshold in CI.
+```bash
+bun run benchmark:startup -- --warm-runs 40 --cold-runs 10
+```
 
-OpenClaude leaves Node's standard compile-cache controls authoritative. Set
-`NODE_DISABLE_COMPILE_CACHE=1` to disable the optimization, including for V8
-coverage runs that require uncached compilation.
+Benchmark và launcher đã biên dịch yêu cầu Node.js `>=24.22.1`; khuyến nghị Node 26. Đặt `NODE_DISABLE_COMPILE_CACHE=1` để tắt compile cache, bao gồm trường hợp chạy V8 coverage cần biên dịch không cache.
 
-Before opening or updating a PR, run the authoritative [local pre-push validation contract](CONTRIBUTING.md#validation). The commands below are useful for narrow iteration, but they do not replace that required preflight:
+Trước khi mở hoặc cập nhật pull request, hãy thực hiện các bước kiểm tra bắt buộc trong [quy trình xác thực trước khi push](CONTRIBUTING.md#validation). Các lệnh kiểm tra hẹp ở trên không thay thế quy trình đó.
 
-- `bun run build`
-- `bun run smoke`
-- `bun run test:coverage` when your change affects shared runtime or provider logic
-- focused `bun test ...` runs for the files and flows you changed
+## Cấu trúc repository
 
-## Repository Structure
+- `src/`: mã nguồn chính của CLI và runtime.
+- `scripts/`: script biên dịch, xác minh và bảo trì.
+- `docs/`: hướng dẫn thiết lập, tài liệu phát triển và tài liệu dự án.
+- `vscode-extension/openclaude-vscode/`: tiện ích mở rộng VS Code.
+- `.github/`: tự động hóa repository, mẫu issue/PR và CI.
+- `bin/`: các điểm khởi chạy CLI.
 
-- `src/` - core CLI/runtime
-- `scripts/` - build, verification, and maintenance scripts
-- `docs/` - setup, contributor, and project documentation
-- `vscode-extension/openclaude-vscode/` - VS Code extension
-- `.github/` - repo automation, templates, and CI configuration
-- `bin/` - CLI launcher entrypoints
+## Tiện ích VS Code
 
-## VS Code Extension
+Repository có tiện ích tại [`vscode-extension/openclaude-vscode`](vscode-extension/openclaude-vscode), hỗ trợ khởi chạy OpenClaude, Control Center nhận biết nhà cung cấp, trò chuyện trong trình soạn thảo, giao diện chủ đề và cấu hình tùy chọn **Microsoft Foundry / Azure OpenAI**. Các thông tin như endpoint, API version, deployment và API key được quản lý qua Secret Storage rồi truyền vào terminal được khởi chạy.
 
-The repo includes a VS Code extension in [`vscode-extension/openclaude-vscode`](vscode-extension/openclaude-vscode) for OpenClaude launch integration, provider-aware Control Center, in-editor chat, theme support, and optional **Microsoft Foundry / Azure OpenAI** configuration (endpoint, API version, deployment, API key via Secret Storage) injected into launched terminals. See that folder's [README](vscode-extension/openclaude-vscode/README.md).
+Xem [README của tiện ích VS Code](vscode-extension/openclaude-vscode/README.md).
 
-## Security
+## Bảo mật
 
-If you believe you found a security issue, see [SECURITY.md](SECURITY.md).
+Nếu phát hiện lỗ hổng bảo mật, hãy xem [SECURITY.md](SECURITY.md) để biết cách báo cáo.
 
-## Community
+## Cộng đồng
 
-- Use [GitHub Discussions](https://github.com/Twigpine/openclaude/discussions) for Q&A, ideas, and community conversation
-- Use [GitHub Issues](https://github.com/Twigpine/openclaude/issues) for confirmed bugs and actionable feature work
-- Join the [Discord](https://discord.gg/k68zFR6AcB) to chat with the community in real time
-- Follow [@twigpine on X](https://x.com/twigpine) for updates and announcements
+- [GitHub Discussions](https://github.com/Twigpine/openclaude/discussions): hỏi đáp, chia sẻ ý tưởng và trao đổi cộng đồng.
+- [GitHub Issues](https://github.com/Twigpine/openclaude/issues): báo lỗi và đề xuất công việc cụ thể.
+- [Discord](https://discord.gg/k68zFR6AcB): tham gia cộng đồng.
+- [X / @twigpine](https://x.com/twigpine): cập nhật tin tức và thông báo.
 
-## Contributing
+## Đóng góp
 
-Contributions are welcome. For larger changes, open an issue first so the
-scope is clear before implementation. See [Development](#development) for the
-build, test, and pre-PR validation commands.
+Mọi đóng góp đều được hoan nghênh. Với thay đổi lớn, hãy tạo issue trước để thống nhất phạm vi thực hiện. Tham khảo phần [Phát triển dự án](#phát-triển-dự-án) và [quy trình xác thực trước khi push](CONTRIBUTING.md#validation) để biết các bước kiểm tra cần thiết.
 
-## Disclaimer
+## Tuyên bố miễn trừ trách nhiệm
 
-OpenClaude is an independent community project and is not affiliated with, endorsed by, or sponsored by Anthropic.
+OpenClaude là dự án cộng đồng độc lập, không liên kết, không được Anthropic xác nhận hoặc tài trợ. OpenClaude bắt nguồn từ mã nguồn Claude Code và đã được chỉnh sửa đáng kể để hỗ trợ nhiều nhà cung cấp mô hình và cách sử dụng mở rộng. “Claude” và “Claude Code” là nhãn hiệu của Anthropic PBC.
 
-OpenClaude originated from the Claude Code codebase and has since been substantially modified to support multiple providers and open use. "Claude" and "Claude Code" are trademarks of Anthropic PBC. See [LICENSE](LICENSE) for details.
+Xem [LICENSE](LICENSE) để biết chi tiết về giấy phép.
 
-## License
+## Giấy phép
 
-MIT for OpenClaude contributors' modifications; the derived Claude Code remains Anthropic's. [See more](LICENSE).
+Các phần sửa đổi do cộng tác viên OpenClaude thực hiện được cấp phép theo MIT; phần Claude Code được kế thừa vẫn thuộc phạm vi giấy phép của Anthropic. Xem [LICENSE](LICENSE).
